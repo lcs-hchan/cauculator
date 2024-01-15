@@ -11,7 +11,7 @@ struct ContentView: View {
     @State var base: Int = 1
     @State var base2: Int = 1
     var sum: Int{
-        return base + base2
+        return base - base2
     }
     var body: some View {
         
@@ -57,5 +57,29 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    TabView{
+        ContentView()
+            .tabItem{
+                Image(systemName: "plus")
+                Text("plus")
+            }
+        ContentView()
+            .tabItem {
+                Image(systemName: "minus")
+                Text("minus")
+                
+            }
+        ContentView()
+            .tabItem {
+                Image(systemName: "multiply")
+                Text("multiply")
+                
+            }
+        ContentView()
+            .tabItem {
+                Image(systemName: "divide")
+                Text("divide")
+                
+            }
+    }
 }

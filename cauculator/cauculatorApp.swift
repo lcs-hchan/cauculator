@@ -11,7 +11,8 @@ import SwiftUI
 struct cauculatorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+                ContentView()
+                    }
+            }
         }
-    }
-}
+    

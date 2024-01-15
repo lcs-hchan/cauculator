@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  Multiply.swift
 //  cauculator
 //
 //  Created by Hayden Chan on 2024-01-15.
@@ -7,14 +7,13 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct Multiply: View {
     @State var base: Int = 1
     @State var base2: Int = 1
     var sum: Int{
-        return base + base2
+        return base * base2
     }
     var body: some View {
-        
         VStack {
             HStack {
                 Spacer()
@@ -28,7 +27,7 @@ struct ContentView: View {
                 .padding()
             }
             HStack{
-                Image(systemName: "plus")
+                Image(systemName: "multiply")
                     .resizable()
                     .scaledToFit()
                     .frame(width:30)
@@ -52,34 +51,9 @@ struct ContentView: View {
             }
             
         }
-  
     }
 }
 
 #Preview {
-    TabView{
-        ContentView()
-            .tabItem{
-                Image(systemName: "plus")
-                Text("plus")
-            }
-        SwiftUIView()
-            .tabItem {
-                Image(systemName: "minus")
-                Text("minus")
-                
-            }
-        Multiply()
-            .tabItem {
-                Image(systemName: "multiply")
-                Text("multiply")
-                
-            }
-        Divide()
-            .tabItem {
-                Image(systemName: "divide")
-                Text("divide")
-                
-            }
-    }
+    Multiply()
 }
